@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* .master{
+            display: flex;
+            padding: 20px;
+             
+        } */
+        .one{
+            border: 2px solid rgb(255, 115, 0);
+            border-radius: 20px;
+            text-align: center;
+            padding: 20px;
+        }
+        .two{
+            margin-left:20px ;
+            border: 2px solid rgb(255, 123, 0);
+            border-radius: 20px;
+            text-align: center;
+            padding: 20px;
+        }
+        button{
+            font-size: 30px;
+            padding: 16px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 2px solid red;
+            border-radius: 20px;
+            color: rgb(248, 248, 248);
+            background-color: black;
+            text-align: center;
+        
+            
+        }
+        input{
+            font-size: 50px;
+            text-align: center;
+            border: 2px solid rgb(214, 143, 11);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            
+            
+        }
+        .data{
+            text-align: left;
+            margin-left: 930px;
+        }
+        span{
+            color: red;
+        }
+        a{
+            text-decoration: none;
+            padding: 40px;
+            color: black;
+         
+        }
+        .next{
+            font-size: 30px;
+             
+            margin-top: 35px;
+            margin-left:20px ;
+            border: 2px solid rgb(42, 6, 202);
+            border-radius: 20px;
+            text-align: center;
+            padding: 20px;
+        }
+        h1{
+            font-size: 50px;
+        }
+        .but{
+            text-align: center;
+             
+            margin: 60px;
+            font-size: 40px;
+        
+        }
+        .vip{
+        border: 2px solid rgb(112, 4, 103);
+        border-radius: 20px;
+        padding: 20px;
+    }
+ 
+    </style>
+</head>
+<body>
+<div class="master"> 
+    <div class="one"> 
+        <h1 style="color:rgb(248, 134, 4)"> TÌM KIẾM CÁC DỰ ĐOÁN GDP TUỔI LAO ĐỘNG<h1>
+            <form action="{{url_for('search3')}}" method="POST">
+                <br>NĂM:  <input type="text" name='năm' placeholder="nhập năm "> <br>
+                <button> SEARCH</button>
+                <hr>
+                <div class="data"> 
+                    <br>Năm:<span> {{ages.năm}}</span>  <br> 
+                    <br>Số dân dự đoán:<span> {{ages.t15_24}}</span> triệu người <br> 
+                    <br>Số dân dự đoán:<span> {{ages.t25_49}}</span> triệu người <br>
+                    <br>Số dân dự đoán:<span> {{ages.t50}}</span> triệu người <br>
+                    <br>GDP dự đoán:<span> {{ages.gdp_age}}</span> tỉ USD <br>
+            </div> 
+        </div>     
+</div>      
+<div class="next">
+    <h2>TÌM KIẾM CÁC DỰ ĐOÁN TẠI CÁC MÔ HÌNH KHÁC</h2>
+    <br>
+    <a href="search1">MÔ HÌNH DỰ ĐOÁN GDP TỔNG</a>
+    <a href="search2">MÔ HÌNH DỰ ĐOÁN GDP VÙNG</a>
+
+    <a href="search4">MÔ HÌNH DỰ ĐOÁN GDP THÀNH THỊ - NÔNG THÔN</a>
+
+
+
+
+</div>
+
+<div class="but">
+    <a class="vip" href="quanly">BACK</a>
+</div>            
+                 
+             
+             
+</body>
+</html>

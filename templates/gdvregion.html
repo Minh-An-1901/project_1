@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>MÔ HÌNH DỰ ĐOÁN GDP VÙNG</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .register_page{
+        display: flex;
+         
+    }
+    body{
+        background: url('/static/vipy.jpg');
+        background-size: cover;
+    }
+    .form >form{
+        background-color: rgb(0, 0, 0);
+        background-size: auto;
+        font-size: 30px;
+        padding: 20px 20px;
+        border: 2px solid red;
+        color: red;
+        text-align: center;
+        
+        
+    }
+    input{
+        
+    
+        font-size: 35px;
+        
+        margin: 20px ;
+        text-align: center;
+        border: 10px;
+        border: 2px solid rgb(255, 0, 0);
+        border-radius: 10px;
+        flex: 1;
+         
+         
+        
+    }
+    p{
+        text-align: center;
+        font-size: 215%;
+    }
+    .data{
+        margin-left: 300px;
+    }
+    .data p{
+        font-size: 50px;
+        padding-top: 60px;
+    }
+    .data h2{
+        padding: 29px;
+        font-size: 30px;
+    }
+    .data h3{
+        font-size: 25px;
+        margin-left: 30px;
+    }
+    .submit{
+        padding: 25px;
+        border: 2px solid white;
+        background-color: rgb(12, 14, 15)   ;
+        color: rgb(197, 5, 5)
+        
+        
+        
+    }
+ 
+    .up{
+        background-color: rgb(0, 0, 0);
+        text-align: center;
+        font-size: 30px;
+        padding: 20px;
+        color: white;
+    }
+
+    
+.in{
+     
+     justify-content: center;
+     font-size: 45px;
+     padding: 100px;
+     margin-left: 400px;
+     
+ }
+ a{
+         text-decoration: none;
+         text-align: center;
+         padding: 20px;
+         color: red;
+         background-color: black;
+         border: 2px solid rgb(204, 6, 6);
+         margin-left: 300px;
+         border-radius: 20px;
+         width: 100px;
+         
+         
+     }
+ .vipss{
+     width: 100px;
+ }
+
+
+ span{
+    color: red;
+ }
+ 
+ 
+</style>
+<body>
+    <div class="register_page">
+        <div class="form">
+            <form name="one" action="{{url_for('predicts')}}" method="POST">
+                NĂM: <br><span><input type="number" name='năm' placeholder="nhập năm "></span><br>
+                VÙNG SÔNG HỒNG: <br><input type="number" name='SONGHONG' placeholder="nhập số dân "><br>
+                VÙNG TRUNG DU VÀ MIỀN NÚI BẮC BỘ: <br><input type="number" name='TRUNGDU' placeholder="nhập số dân"><br>
+                VÙNG BẮC TRUNG BỘ: <br><input type="number" name='BACTRUNGBO' placeholder="nhập số dân"><br>
+                VÙNG SÔNG CỬU LONG <br><input type="number" name='CUULONG' placeholder="nhập số dân"><br>
+                VÙNG ĐÔNG NAM BỘ: <br><input type="number" name='DONGNAMBO' placeholder="nhập số dân"><br>
+                VÙNG TÂY NGUYÊN <br><input type="number" name='TAYNGUYEN' placeholder="nhập số dân"><br>
+           
+                <input type="submit" value="predict" class="submit">
+            </form>
+   
+        </div>
+        <div class="data">
+            <p> TỔNG GDP 6 VÙNG : <span>{{prediction}}</span> TỈ USD</p>
+            <h2>Thông số dự đoán dân số mới nhập:  <span>{{ĐỘC_LẬP}}</span> triệu người vào năm:  <span>{{năm}}</span></h2>
+            <hr>
+            <h2> ĐÁNH GIÁ ĐỘ CHÍNH XÁC:</h2>
+             <h3> Sai số mae: <span>{{mae}}</span></h3>
+            <h3>Sai số mse: <span>{{mse}}</span></h3>
+            <h3>Sai số rmse: <span>{{rmse}}</span></h3>
+             
+        </div>
+          
+         
+    </div>
+  
+    <div class="in">
+        <a class="vipss"  href="region">NEXT PREDICTION</a>
+        <a href="trangchu1">BACK</a>
+    </div>
+</body>
+
+</html>

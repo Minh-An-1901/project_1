@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mô Hình Dự Đoán GDP</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-image: url('/static/vip\ nhất.jpg');
+        background-size: cover;
+    }
+    .GDP{
+         padding: 200px;
+         display: flex ;
+         justify-content: center;
+         margin-top: 127px;
+         
+        
+
+    }
+    a{
+        text-decoration: none;
+        font-size: 40px;
+        color: rgb(255, 0, 0);
+        
+    }
+    .bg{
+        background-color: rgb(3, 3, 3)  ;
+        border: 2px solid red;
+    }
+    h1{
+        text-align: center;
+        padding: 70px;
+        color: white;
+        font-size: 60px;
+    }
+    .one{
+         
+       padding: 0px 30px;
+       width: 1900px;
+        margin-left: 60px;
+        margin-top: 26px;
+        
+    } 
+    .one a{
+        font-size: 40px;
+        text-align: center;
+        
+         
+    }
+    .two{
+        width: 1400px;
+        margin-left: 520px;
+    }
+    .two a{
+         
+        font-size: 40px;
+        
+    }
+</style>
+<body>
+    <div class="bg"> 
+    <h1> MÔ HÌNH DỰ ĐOÁN DÂN SỐ ẢNH HƯỞNG ĐẾN KINH TẾ</h1>
+</div>
+    <form action="{{url_for('add2')}}" method="POST">
+        <div class="GDP"> 
+            <div class="one"> 
+                <br> <a href="totals" style ="color: rgb(94, 104, 250)"> MÔ HÌNH DỰ ĐOÁN GDP TỔNG</a> <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br><a href="region" style="color: rgba(4, 252, 132, 0.938)">MÔ HÌNH DỰ ĐOÁN GDP VÙNG</a> <br>
+                <br>
+          </div>
+            <div class="two"> 
+                <br><a href="city">MÔ HÌNH DỰ ĐOÁN GDP THÀNH THỊ VÀ NÔNG THÔN</a> <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br><a href="agess" style="color: rgba(252, 136, 4, 0.938)">MÔ HÌNH DỰ ĐOÁN GDP LAO ĐỘNG THEO TUỔI</a> <br>
+            </div>
+        </div>
+ 
+</body>
+</html>

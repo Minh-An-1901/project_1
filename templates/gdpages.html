@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background: url('/static/vipb.jpg');
+        background-size: cover;
+    }
+    .master{
+        display: flex;
+        
+    }
+    .form{
+        color: rgb(223, 41, 9);
+       
+        margin-right: 300px;
+        font-size: 40px;
+        background-color: rgb(0, 0, 0);
+        text-align: center;
+        width: 650px;
+        padding-top: 20px;
+         
+    }
+    input{
+        font-size: 40px;
+        margin: 20px ;
+        text-align: center;
+        border: 3px solid rgb(209, 0, 0);
+        border-radius: 15px;
+        flex: 1;
+         
+        
+    }
+    .submit{
+         
+        color: rgb(255, 0, 0);
+        background-color: black;
+        width: 200px;
+        height: 100px;
+        border: 2px solid rgb(247, 243, 243);
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+    .data{
+        font-size: 30px;
+        margin-top: 70px;
+    }
+    p{
+        font-size: 50px;
+    }
+       
+    
+    .up{
+        font-size: 40px;
+        border: 2px solid red;
+        text-align: center;
+        color: white;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+    .submit2{
+        margin-top: 20px;
+        color: rgb(255, 0, 0);
+        background-color: black;
+        width: 200px;
+        height: 100px;
+        border: 2px solid rgb(247, 243, 243);
+        border-radius: 20%;
+     
+        
+    }
+    .in{
+     
+     justify-content: center;
+     font-size: 40px;
+     padding: 100px;
+     margin-left: 550px;
+     
+    }
+    a{
+         text-decoration: none;
+         text-align: center;
+         padding: 20px;
+         color: red;
+         background-color: black;
+         border: 2px solid rgb(255, 5, 5);
+         margin-left: 300px;
+         border-radius: 10px;
+         width: 100px;
+         
+     }
+    .vipss{
+     width: 100px;
+ }
+ span{
+    color: red;
+ }
+</style>
+<body>
+    <div class="master"> 
+        <div class="form">
+            <form name="one" action="{{url_for('predict5')}}" method="POST">
+                NĂM: <br><span><input type="number" name='năm' placeholder="nhập năm "></span><br>
+                <br>
+               TUỔI 15_24: <br><input type="number" name='15_24' placeholder="nhập số dân "><br>
+                <br>
+                TUỔI 25_49: <br><input type="number" name='25_49' placeholder="nhập số dân "><br>
+                <br>
+                TUỔI 50+: <br><input type="number" name='50' placeholder="nhập số dân "><br>
+                
+               
+            
+                <input type="submit" value="predict" class="submit">
+            </form>
+    
+            
+            
+        
+        </div>
+        <div class="data">
+            <h1> TỔNG GDP TUỔI  : <span>{{data}}</span>  TỈ USD</h1>
+            <br>
+            <h2> Các số liệu dự đoán tuổi mới nhập: <span>{{INPUT}}</span> triệu người tại năm  : <span>{{năm}}</span></h2>
+            <br>
+            <hr>
+            <br>
+            <h3>ĐỘ CHÍNH XÁC:</h3>
+            <br>
+            <h3> Sai số mae: <span>{{mae}}</span></h3>
+            <h3>Sai số mse: <span>{{mse}}</span></h3>
+            <h3>Sai số rmse: <span>{{rmse}}</span></h3>
+            <!-- <h3>sai số to nhất: {{max}}</h3> -->
+        </div>
+    </div>
+    <div class="in">
+        <a class="vipss"  href="agess">NEXT PREDICTION</a>
+        <a href="trangchu1">BACK</a>
+    </div>
+</body>
+</html>

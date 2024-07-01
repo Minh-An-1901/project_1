@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xem Danh Sách Dự Doán</title>
+</head>
+<style>
+    .views{
+        display: flex;
+        margin-top: 50px;
+   
+        
+        
+    }
+    body{
+        /* background: url('/static/vip2.jpg');
+        background-size: cover; */
+        background-color: black;
+    }
+    .AGE{
+         
+        margin-left: 50px;
+        padding: 0 80px;
+        margin-right: 50px;
+        
+        border: 2px solid rgb(255, 166, 0);
+        border-radius: 20px;
+        color: rgb(255, 136, 0);
+        
+     
+    }
+    .TOTAL{
+        margin-left: 20px;
+        padding: 0 70px;
+        margin-right: 20px;
+       
+        border: 2px solid rgb(0, 68, 255);
+        border-radius: 20px;
+        color: blue;
+
+    }
+    .CITY-COUNTRY{
+        margin-left: 50px;
+        padding: 0 70px;
+        margin-right: 10050pxpx;
+        border: 2px solid rgb(255, 0, 0);
+        border-radius: 20px;
+        color: rgb(255, 0, 0);
+
+    }
+     
+    .REGION{
+        margin-left: 20px;
+        padding: 0px 70px;
+        margin-right: 50px  ;
+        border: 2px solid rgb(0, 255, 170);
+        border-radius: 20px;
+        color: rgb(0, 255, 157);
+        
+    }   
+    p{
+        color: rgb(255, 255, 255);
+        font-size: 22px;
+        width: 350px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    .but{
+            text-align: center;
+             
+            margin: 60px;
+            font-size: 40px;
+        
+        }
+        .vip{
+        border: 2px solid rgb(250, 4, 229);
+        border-radius: 20px;
+        padding: 20px;
+        text-decoration: none;
+        color: azure;
+    }
+</style>
+<body>
+    <div class="views">
+        
+        <div class="TOTAL"> 
+            <h1>DANH SÁCH DỰ ĐOÁN GDP TỔNG DÂN</h1>
+            {% for total in totall %}
+                <h2 style="color: rgb(55, 0, 255) "><li>Năm:{{total.năm}} </li></h2>
+            <ul> 
+                <p>Tổng dân: {{total.total_population}} triệu người</p>
+                <p>GDP tổng : {{total .total_gdp}} TỈ USD</p>
+                
+                
+                
+            </ul>
+            {% endfor %}
+         </div>
+         <div class="CITY-COUNTRY"> 
+            <h1>DANH SÁCH DỰ ĐOÁN GDP THÀNH THỊ VÀ NÔNG THÔN</h1>
+            {% for city_contry in citys %}
+                <h2 style="color: red "><li>Năm:{{city_contry.năm}} </li></h2>
+            <ul> 
+                <p>Nông thôn: {{city_contry.nt}} triệu người</p>
+                <p>Thành thị: {{city_contry.tt}} triệu người</p>
+                <p>GDP tổng : {{city_contry.gdp_city}} TỈ USD</p>
+                
+                
+                
+            </ul>
+            {% endfor %}
+         </div>
+
+        <div class="AGE"> 
+            <h1>DANH SÁCH DỰ ĐOÁN GDP TUỔI</h1>
+            {% for age in ages %}
+                <h2 style="color: rgb(255, 123, 0) "><li>năm:{{age.năm}} </li></h2>
+            <ul> 
+                <p>Tuổi 15-24 : {{age.t15_24}} triệu người </p>
+                <p>Tuổi 25-49: {{age.t25_49}} triệu người</p>
+                <p>Tuổi  50 trở lên: {{age.t50}} triệu người</p>
+                <p>GDP tuổi : {{age.gdp_age}} TỈ USD</p>
+                
+            </ul>
+            {% endfor %}
+         </div>
+
+         <div class="REGION"> 
+            <h1>DANH SÁCH DỰ ĐOÁN GDP VÙNG</h1>
+            {% for regions in region %}
+                <h2 style="color: rgb(0, 255, 85) "><li>Năm:{{regions.năm}} </li></h2>
+            <ul> 
+                <p>Vùng sông hồng: {{regions.sông_hồng}} triệu người</p>
+                <p>Vùng trung du : {{regions.trung_du}} triệu người </p>
+                <p>Vùng bắc trung bộ: {{regions.bắc_trung_bộ}} triệu người</p>
+                <p>Vùng sông cửu long: {{regions.cửu_long}} triệu người</p>
+                <p>Vùng đông nam bộ : {{regions.đông_nam_bộ}} triệu người </p>
+                <p>Vùng tây nguyên: {{regions.tây_nguyên}} triệu người</p>
+                <p>GDP tổng: {{regions.gdp_vung}} TỈ USD</p>
+                
+                
+            </ul>
+            {% endfor %}
+         </div>
+         
+</div>
+<div class="but">
+    <a class="vip" href="quanly">BACK</a>
+</div>
+</body>
+</html>

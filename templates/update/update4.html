@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .master{
+        display: flex;
+        
+    }
+    .form{
+        color: rgb(223, 41, 9);
+        padding-top: 20px;
+        width: 600px;
+        margin-right: 300px;
+        font-size: 40px;
+        background-color: rgb(5, 5, 5);
+        text-align: center;
+         
+    }
+    input{
+        font-size: 40px;
+        margin: 20px ;
+        text-align: center;
+        border: 3px solid rgb(209, 0, 0);
+        border-radius: 10px;
+        flex: 1;
+         
+        
+        
+    }
+    .submit{
+        color: rgb(255, 0, 0);
+        background-color: black;
+        width: 200px;
+        height: 100px;
+        border: 2px solid rgb(247, 247, 247);
+        border-radius: 20px;
+        margin: 20px;
+    }
+ 
+    p{
+        font-size: 40px;
+    }
+  
+    .up{
+        text-align: center;
+        font-size: 50px;
+        color: white;
+        border: 2px solid red;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .in{
+     
+     justify-content: center;
+     font-size: 40px;
+     padding: 100px;
+     margin-left: 550px;
+     
+    }
+    a{
+         text-decoration: none;
+         text-align: center;
+         padding: 20px;
+         color: red;
+         background-color: black;
+         border: 2px solid rgb(255, 5, 5);
+         margin-left: 300px;
+         border-radius: 15px;
+         width: 100px;
+         
+     }
+    .vipss{
+     width: 100px;
+ }
+ .but{
+            text-align: center;
+             
+            margin: 60px;
+            font-size: 40px;
+        
+        }
+        .vip{
+            border: 2px solid rgb(112, 4, 103);
+            border-radius: 20px;
+            padding: 20px;
+        }
+        h2{
+        text-align: center;
+        font-size: 100px;
+        margin-top: 150px;
+        margin-bottom: 50px;
+        color: rgb(248, 11, 11);
+        margin-left: 30px;
+    }
+    h3{
+            text-align: center;
+            font-size: 60px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+        .data {
+            font-size: 23px;
+            margin-bottom: 60px;  
+        } 
+        h1{
+            text-align: center ;
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+</style>
+<body>
+    <div class="master"> 
+        <div class="form">
+            <form name="one" action="{{url_for('update44')}}" method="POST">
+                <h1>UPDATE MÔ HÌNH DỰ ĐOÁN GDP THÀNH THỊ - NÔNG THÔN</h1>
+                <hr>
+                <br>
+                NĂM: <br><span><input type="number" name='năm' placeholder="nhập năm "></span><br>
+                <br>
+                NÔNG THÔN: <br><input type="number" name='nt' placeholder="nhập số dân "><br>
+                <br>
+               THÀNH THỊ: <br><input type="number" name='tt' placeholder="nhập số dân "><br>
+                <br>
+               GPD <br><input type="number" name='gdp_city' placeholder="nhập số GDP "><br>
+                <br>
+                
+                <br>
+                <input type="submit" value="UPDATE" class="submit">
+            </form>
+          
+           
+        </div>
+        <h2>{{NOTE}}</h2>
+    </div>
+    
+</div>
+<div class="but">
+    <a class="vip" href="quanly">BACK</a>
+
+</div>
+    <hr>
+    <div class="data">
+        <h3> UPDATE DỮ LIỆU CÁC MÔ HÌNH KHÁC</h3>
+        <br><a href="update1"> MÔ HÌNH DỰ ĐOÁN GDP TỔNG</a>
+        <a href="update2">MÔ HÌNH DỰ ĐOÁN GDP VÙNG</a>
+        <a href="update3">MÔ HÌNH DỰ ĐOÁN GDP TUỔI  </a><br>
+    </div>
+</body>
+</html>

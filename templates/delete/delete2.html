@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .sp1{
+        text-align: center;
+        font-size: 35px;
+        padding: 30px;
+        border: 2px solid rgb(2, 192, 66);
+        border-radius: 20px;
+    }
+    input{
+        font-size: 35px;
+        text-align: center;
+        border: 1px solid rgb(9, 160, 89);
+        border-radius: 20px;
+    }
+    h2{
+        text-align: center;
+        font-size: 60px;
+        margin-top: 150px;
+        margin-bottom: 50px;
+        color: rgb(7, 156, 32);
+    }
+    button{
+        font-size: 35px;
+        margin-top: 35px;
+        padding: 10px;
+        border: 1px solid red;
+        color: rgb(248, 248, 248);
+        background-color: black;
+        border-radius: 20px;
+
+    }
+    .data{
+        margin-top: 150px;
+        text-align: center;
+        border: 2px solid rgb(0, 4, 255);
+        border-radius: 20px;
+        padding: 30px 0;
+    }
+    .data br{
+      
+        display: flex;
+        
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        padding: 40px;
+        font-size: 30px;
+    }
+    h3{
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+    .but{
+            text-align: center;
+             
+            margin: 60px;
+            font-size: 40px;
+        
+        }
+        .vip{
+        border: 2px solid rgb(112, 4, 103);
+        border-radius: 20px;
+        padding: 20px;
+    }
+</style>
+<body>
+
+    <div class="sp1">
+        <h1 style="color: rgb(7, 156, 32);">XÓA DỮ LIỆU MÔ HÌNH DỰ ĐOÁN GDP VÙNG</h1>
+        <form action="{{url_for('delete22')}}" method="POST">
+            <br> NĂM:  <input type="text" name='năm' placeholder="Nhập năm "> <br>
+                <button>xác nhận</button>
+    </div>           
+                     <hr>
+   
+            <h2>{{NOTE}}</h2> 
+
+    <div class="data">
+        <h3> XÓA DỮ LIỆU CÁC MÔ HÌNH KHÁC</h3>
+        <br><a href="delete1"> MÔ HÌNH DỰ ĐOÁN GDP TỔNG</a>
+        <a href="delete3">MÔ HÌNH DỰ ĐOÁN GDP TUỔI</a>
+        <a href="delete4">MÔ HÌNH DỰ ĐOÁN GDP THÀNH THỊ - NÔNG THÔN</a><br>
+    </div>
+
+    <div class="but">
+        <a class="vip" href="quanly">BACK</a>
+    </div>  
+</body>
+</html>

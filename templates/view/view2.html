@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    span{
+        color: red;
+    }
+   
+    .mater>h1{
+        padding: 40px;
+        text-align: center;
+        margin-bottom: 170px;
+        font-size: 40px;
+        color: aliceblue;
+        background-color: black;
+    }
+    .data h2{
+        font-size: 40px;
+        padding: 20px;
+        margin-left: 620px;
+        margin-top: 50px;
+    }
+    .but{
+            text-align: center;
+             
+            margin: 60px;
+            font-size: 40px;
+        
+        }
+        .vip{
+        border: 2px solid rgb(112, 4, 103);
+        border-radius: 20px;
+        padding: 20px;
+        text-decoration: none;
+    }
+</style>
+<body>
+<div class="mater"> 
+    <h1>XEM SỐ LẦN NGƯỜI DÙNG SỬ DỤNG MÔ HÌNH</h1>
+    <div class="data"> 
+        <h2> Số lần ấn chọn mô hình dự đoán GDP tổng là : <span>{{total_count}}</span>  lần</h2>
+        <h2> Số lần ấn chọn mô hình dự đoán GDP vùng là : <span>{{region_count}}</span>  lần</h2>
+        <h2> Số lần ấn chọn mô hình dự đoán GDP tuổi là : <span>{{age_count}}</span>  lần</h2>
+        <h2> Số lần ấn chọn mô hình dự đoán GDP thành thị-  nông thôn là : <span>{{city_count}}</span>  lần</h2>
+    </div>
+    <div class="but">
+        <a class="vip" href="quanly">BACK</a>
+    </div>
+</div>     
+</body>
+</html>

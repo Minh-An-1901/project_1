@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     
+
+}
+
+body{
+  
+    background-image: url('/static/vipr.jpg');
+    background-size: cover;
+    
+    
+    
+} 
+header{
+    width: 100%;
+    height: 120px;
+    background-color: rgb(7, 7, 7);
+    border-bottom: 1px solid rgb(255, 255, 255) ;
+    
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    
+
+
+
+}
+
+.nav li:hover{
+    border-bottom: 1px solid rgb(214, 11, 11);
+     
+}
+.nav >li{
+    list-style: none;
+    padding: 23px  100px;
+    position: relative;
+    margin-top: 20px;
+}
+.nav li a {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-decoration: none;
+    line-height: 50px;
+    margin-right: 110px;
+     
+}
+
+
+ 
+
+
+/* thiết kế dữ liệu  */
+.sub-nav2{
+  
+    display: none;
+    
+    width: 420px;
+    height: auto;
+    background-color: rgb(6, 2, 10);
+    position: absolute;
+    left: 20px;
+    top: 70px;
+    margin-left: 70px;
+    margin-top: 27px;
+}
+.sub-nav2 li {
+    list-style: none;
+    text-align: center;
+    border-bottom: 1px solid rgb(255, 255, 255) ;
+     
+}
+.sub-nav2 .sub-nav2{
+    background-color: black;
+    left: 302px;
+    top: 0px;
+}
+.nav .sub-nav2 > li {
+    position: relative;
+
+
+}
+.nav li:hover >.sub-nav2{
+    display: block;
+}
+</style>
+<body>
+    <header>
+        <form action="{{url_for('manager')}}" method="POST"></form>
+        <ul class="nav">
+            <li>
+                <a href="">CHỨC NĂNG TÌM KIẾM </a>
+                <ul class="sub-nav2">
+                    <li>
+                        <a href="search1">Mô hình dự đoán GDP tổng</a>
+                        
+                    </li>
+
+                    <li>
+                        <a href="search2">Mô hình dự đoán GDP vùng</a>
+    
+                    </li>
+
+                    <li>
+                        <a href="search3">Mô hình dự đoán GDP tuổi</a>
+                      
+                    <li>
+                        <a href="search4">Mô hình dự đoán GDP thành thị - nông thôn</a>
+                       
+                    </li>
+
+
+                </ul>
+            </li>
+            <li>
+                <a href="">CHỨC NĂNG XÓA  </a>
+                <ul class="sub-nav2">
+                    <li>
+                        <a href="delete1">Mô hình dự đoán GDP tổng</a>
+                        
+                    </li>
+
+                    <li>
+                        <a href="delete2">Mô hình dự đoán GDP vùng</a>
+    
+                    </li>
+
+                    <li>
+                        <a href="delete3">Mô hình dự đoán GDP tuổi</a>
+                      
+                    <li>
+                        <a href="delete4">Mô hình dự đoán GDP thành thị - nông thôn</a>
+                       
+                    </li>
+
+
+                </ul>
+            </li>
+         
+            <li>
+                <a href="">CHỨC NĂNG SỬA  </a>
+                <ul class="sub-nav2">
+                    <li>
+                        <a href="update1">Mô hình dự đoán GDP tổng</a>
+                        
+                    </li>
+
+                    <li>
+                        <a href="update2">Mô hình dự đoán GDP vùng</a>
+    
+                    </li>
+
+                    <li>
+                        <a href="update3">Mô hình dự đoán GDP tuổi</a>
+                      
+                    <li>
+                        <a href="update4">Mô hình dự đoán GDP thành thị - nông thôn</a>
+                       
+                    </li>
+
+
+                </ul>
+            </li>
+            <li>
+                <a href="">CHỨC NĂNG XEM  </a>
+                <ul class="sub-nav2">
+                    <li>
+                        <a href="view">Xem các dự đoán GDP mỗi mô hình </a>
+                        
+                    </li>
+
+                    <li>
+                        <a href="count">Xem số lần dự đoán GDP mỗi mô hình</a>
+    
+                    </li>
+ 
+
+
+                </ul>
+            </li>
+        </ul>
+    </header>
+</body>
+</html>
